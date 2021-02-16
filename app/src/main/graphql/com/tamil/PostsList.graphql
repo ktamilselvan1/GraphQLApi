@@ -1,0 +1,19 @@
+query PostsList ($queryOption:PageQueryOptions!){
+      posts (options:$queryOption){
+            data {
+        	    id
+        	    title
+                body
+                user {
+                    id
+                    name
+                    username
+                    email
+                    phone
+                }
+      	    }
+      	    meta {
+      	        totalCount
+      	    }
+      }
+    }

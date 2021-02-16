@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/postsListFragment">
+
+    <fragment
+        android:id="@+id/postsListFragment"
+        android:name="com.tamil.graphqlapp.ui.posts.PostsListFragment"
+        android:label="@string/app_name">
+        <action
+            android:id="@+id/action_postsListFragment_to_postsDetailFragment"
+            app:destination="@id/postsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postsDetailFragment"
+        android:name="com.tamil.graphqlapp.ui.posts.PostsDetailFragment"
+        android:label="@string/app_name">
+        <argument
+            android:name="post_data"
+            app:argType="com.tamil.graphqlapp.ui.posts.data.PostsAdapterItem"
+            app:nullable="true" />
+    </fragment>
+</navigation>
